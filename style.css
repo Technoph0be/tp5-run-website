@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: rgb(96, 96, 96);
+  outline: none;
+}
+body {
+  max-width: 100vw;
+}
+
+h1 {
+  font-size: 2rem;
+  color: rgb(24, 24, 24);
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+button {
+  /* à transformer en a, et penser à les mettre en inline block */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: solid 1px rgb(196, 196, 196);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  width: fit-content;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover,
+.icon:hover {
+  border: 1px solid skyblue;
+  color: skyblue;
+}
+
+/* IL faudrait ajouter ça sur section-1, section-2, section-3 à la place des borders.
+box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.082); */
+
+.section-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+
+.section-header-left-part {
+  display: flex;
+  align-items: center;
+}
+
+.section-header-left-part-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 50px;
+}
+
+.section-header-right-part {
+  background: url(./assets/img/banner.jpg) right/cover;
+}
+
+.section-middle {
+  display: grid;
+  grid-template-columns: 37% 63%;
+  min-height: 400px;
+}
+
+.section-middle-left-part {
+  background: url(./assets/img/img-left.jpg) center/cover;
+}
+
+.section-middle-right-part {
+  display: flex;
+  align-items: center;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: rgb(229, 229, 229);
+}
+.section-middle-right-part-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 50px;
+}
+
+.section-last {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  min-height: 400px;
+}
+
+.section-last-left-part {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px;
+  border-color: rgb(229, 229, 229);
+}
+
+.section-last-left-part-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 50px;
+}
+
+.section-last-right-part {
+  background: url(./assets/img/img-right.jpg) center/cover;
+}
+
+.section-form {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+}
+.section-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  width: 50%;
+  max-width: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+label {
+  font-size: 0.8rem;
+}
+input,
+textarea {
+  border: 1px solid rgb(229, 229, 229);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.section-form-content-person-info {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-form-content-person-info-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+}
+.section-form-content-person-info-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 50%;
+}
+.section-form-content-person-info-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.divider {
+  margin: 0 50px;
+  border: solid 0.5px rgb(229, 229, 229);
+}
+
+.section-footer {
+  padding: 75px;
+}
+
+.section-footer-social-networks {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  border: solid 1px rgb(229, 229, 229);
+  border-radius: 50px;
+}
+
+/* ajouter un focus pour remplacer la outline avec la pseudo classe focus : 
+
+textarea:focus { -> et pareil pour l'input.
+outline: 2px solid skyblue; -> ou border si la outline est pas belle.
+*/
+
+/* On aurait pu faire un before dans le CSS pour le divider :
+
+footer {
+position: relative;
+}
+
+
+footer:before{
+content: "";
+position: absolute;
+width: 90%;
+height: 1px;
+background: rgba(0, 0, 0, 0.082);
+left: 50%;
+transform: translateX(-50%);
+top: 0;
+
+}
+*/
+
+/* footer ul{
+display:flex;
+justify-content: space-between;
+width: 33%;
+min-width: 300px;
+margin: 0 auto; */
+
+/* footer a {
+border: 1px solid #ccc;
+border-radius: 50px;
+width: 44px;
+height: 44px;
+display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.3s;
+ */
+
+
+
+ /* @media screen and (max-width: 650px) {
+ } */
